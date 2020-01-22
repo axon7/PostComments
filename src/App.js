@@ -1,16 +1,14 @@
-import React, { useEffect } from "react";
-import { connect } from "react-redux";
-import { fetchPosts } from "./actions/actions";
-const App = ({ fetchPosts }) => {
-  useEffect(() => {
-    fetchPosts();
-  }, []);
+import React from "react";
+import List from "./components/List";
+import SearchBar from "./components/SearchBar";
 
-  return <div></div>;
+const App = () => {
+  return (
+    <div>
+      <SearchBar />
+      <List />
+    </div>
+  );
 };
 
-const mapStateToProps = state => ({
-  posts: state.posts
-});
-
-export default connect(mapStateToProps, { fetchPosts })(App);
+export default App;
