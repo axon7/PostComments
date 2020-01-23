@@ -9,11 +9,13 @@ const ListItem = ({ item, fetchComments }) => {
   };
 
   return (
-    <div to="/comments" onClick={() => fetchCurrentComments(item.id)}>
+    <div>
       <p>{item.title}</p>
       <p>{item.body}</p>
       <p>{item.id}</p>
-      <Link to="/comments">Comments</Link>
+      <Link to="/comments" onClick={() => fetchCurrentComments(item.id)}>
+        Comments
+      </Link>
     </div>
   );
 };
