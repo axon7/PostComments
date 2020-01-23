@@ -1,7 +1,8 @@
 import {
   FETCH_POSTS_SUCCESS,
   FETCH_COMMENTS_SUCCESS,
-  SEARCH_BY_TITLE
+  SEARCH_BY_TITLE,
+  FETCH_PENDING
 } from "../actions/actions";
 
 const initialState = {
@@ -18,6 +19,11 @@ const postCommentsReducer = (state = initialState, action) => {
   //   });
 
   switch (action.type) {
+    case FETCH_PENDING:
+      return {
+        ...state,
+        loading: true
+      };
     case FETCH_POSTS_SUCCESS:
       return {
         ...state,
