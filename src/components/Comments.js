@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 const Comments = ({ comments, loading }) => {
   const commentsToRender = comments.map(item => (
-    <div>
+    <div key={item.id}>
       <p>{item.name}</p>
       <p>{item.email}</p>
       <p>{item.body}</p>
