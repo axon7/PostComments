@@ -3,9 +3,11 @@ import ListItem from "./ListItem";
 import { connect } from "react-redux";
 import { fetchPosts } from "../actions/actions";
 
-const List = ({ fetchPosts, filteredPosts }) => {
+const List = ({ fetchPosts, filteredPosts, posts }) => {
   useEffect(() => {
-    fetchPosts();
+    if (posts.length <= 0) {
+      fetchPosts();
+    }
   }, []);
   return (
     <div>
@@ -17,7 +19,8 @@ const List = ({ fetchPosts, filteredPosts }) => {
 };
 
 const mapStateToProps = state => ({
-  filteredPosts: state.filteredPosts
+  filteredPosts: state.filteredPosts,
+  posts: state.posts
 });
 
 export default connect(mapStateToProps, { fetchPosts })(List);
