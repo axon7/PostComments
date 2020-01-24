@@ -6,10 +6,12 @@ import styled from "styled-components";
 
 const Post = styled.div`
   background-color: #ffffff;
-  margin: 20px;
   padding: 10px;
+  margin-bottom: 20px;
   box-shadow: 0 8px 6px -6px grey;
   border-radius: 5px;
+  max-width: 960px;
+  width: 80%;
 
   :hover {
     transition: 0.2s;
