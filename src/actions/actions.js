@@ -27,7 +27,6 @@ export const fetchPosts = () => async dispatch => {
       `${corsproxy}https://jsonplaceholder.typicode.com/posts`
     );
     const posts = await res.json();
-    console.log(posts);
     await dispatch(fetchPostsSuccess(posts));
   } catch (error) {
     await dispatch(fetchFailure(error));
@@ -46,7 +45,6 @@ export const fetchComments = id => async dispatch => {
       `${corsproxy}https://jsonplaceholder.typicode.com/comments?postId=${id}`
     );
     const comments = await res.json();
-    console.log(comments);
     await dispatch(fetchCommentsSuccess(comments));
   } catch (error) {
     await dispatch(fetchFailure(error));

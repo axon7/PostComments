@@ -1,6 +1,5 @@
 import React from "react";
 import List from "./components/List";
-import SearchBar from "./components/SearchBar";
 import Comments from "./components/Comments";
 import Layout from "./components/Layout";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";

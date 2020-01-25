@@ -22,6 +22,7 @@ const SearchBar = ({ searchByTitle, posts }) => {
       <StyledInput
         onChange={e => handleInputChange(e)}
         placeholder="Search title"
+        type="text"
       />
     </div>
   );

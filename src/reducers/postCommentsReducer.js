@@ -7,17 +7,11 @@ import {
 
 const initialState = {
   posts: [],
-  error: "",
+  filteredPosts: [],
   comments: [],
-  searchTerm: "",
-  filteredPosts: []
+  error: ""
 };
 const postCommentsReducer = (state = initialState, action) => {
-  // const filteredPosts = searchTerm =>
-  //   [...state.posts].filter(item => {
-  //     return item.title.indexOf(searchTerm) > -1;
-  //   });
-
   switch (action.type) {
     case FETCH_PENDING:
       return {
