@@ -19,8 +19,12 @@ const StyledComment = styled.div`
 const Comments = ({ comments, loading }) => {
   const commentsToRender = comments.map(item => (
     <StyledComment key={item.id}>
-      <p>Name: {item.name}</p>
-      <p>E-mail: {item.email}</p>
+      <p>
+        <b>Name:</b> {item.name}
+      </p>
+      <p>
+        <b>E-mail:</b> {item.email}
+      </p>
       <p>{item.body}</p>
     </StyledComment>
   ));

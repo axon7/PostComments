@@ -26,8 +26,12 @@ const ListItem = ({ item, fetchComments }) => {
 
   return (
     <Post>
-      <p>Post ID: {item.id}</p>
-      <p>Title: {item.title}</p>
+      <p>
+        <b>Post ID:</b> {item.id}
+      </p>
+      <p>
+        <b>Title:</b> {item.title}
+      </p>
       <p> {item.body}</p>
 
       <Link to="/comments" onClick={() => fetchCurrentComments(item.id)}>
