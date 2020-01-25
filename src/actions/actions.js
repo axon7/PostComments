@@ -59,6 +59,9 @@ export const searchByTitle = (posts, searchTerm) => ({
     filteredPosts:
       searchTerm === ""
         ? posts
-        : posts.filter(item => item.title.indexOf(searchTerm) > -1)
+        : posts.filter(
+            item =>
+              item.title.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1
+          )
   }
 });
